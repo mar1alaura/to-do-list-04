@@ -23,3 +23,22 @@ async function initDB() {
     )`);
     
 }
+
+app.get('/tasks', async(req, res) => {
+const tasks = await db.all()
+res.json(tasks)
+});
+
+app.post('/tasks', async(req, res) => {
+    const  {description} = req.body;
+    const stmt = await db.prepare(`INSERT INTO tasks (description) VALUE (?)`);
+    await stmt.finalize();
+    res.status(201).json({message: 'Task added'})
+});
+
+app.delete('/tasks', async(req, res) => {
+    const { id } = req.params;
+    await db.get(`SELECT * FROM tasks WHERE id = ?` , id);
+    res.status(204).send();
+
+})
