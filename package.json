@@ -2,22 +2,23 @@
   "name": "to-do-list-04",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mar1alaura/to-do-list-04.git"
+    "url": "git+https://github.com/HelenDellaRoveri/To-Do-List-04.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
-    "url": "https://github.com/mar1alaura/to-do-list-04/issues"
+    "url": "https://github.com/HelenDellaRoveri/To-Do-List-04/issues"
   },
-  "homepage": "https://github.com/mar1alaura/to-do-list-04#readme",
+  "homepage": "https://github.com/HelenDellaRoveri/To-Do-List-04#readme",
   "dependencies": {
     "express": "^5.1.0",
     "sqlite": "^5.1.1",
